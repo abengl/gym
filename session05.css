@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    font-family: "Lucida Sans", sans-serif;
+  }
+  header {
+    padding: 20px;
+  }
+  main {
+    padding: 0 30px 20px;
+  }
+  section {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  p {
+    padding: 15px 0;
+  }
+  code {
+    display: block;
+    width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.6;
+  }
