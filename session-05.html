@@ -4,37 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gym</title>
-    <style>
-      * {
-        margin: 0;
-        box-sizing: border-box;
-      }
-      body {
-        width: 100%;
-        font-family: "Lucida Sans", sans-serif;
-      }
-      header {
-        padding: 20px;
-      }
-      main {
-        padding: 0 30px 20px;
-      }
-      section {
-        padding-bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-      p {
-        padding: 15px 0;
-      }
-      code {
-        display: block;
-        width: 100%;
-        white-space: pre-wrap;
-        line-height: 1.6;
-      }
-    </style>
+    <link rel="stylesheet" href="session05.css">
   </head>
   <body>
     <header>
@@ -80,7 +50,8 @@
         <p>
           Implement a difference function, which subtracts one list from another
           and returns the result. It should remove all values from list a, which
-          are present in list b keeping their order. If a value is present in b, all of its occurrences must be removed from the other.
+          are present in list b keeping their order. If a value is present in b,
+          all of its occurrences must be removed from the other.
         </p>
         <code class="e5"></code>
       </section>
@@ -90,82 +61,6 @@
         <code class="e6"></code>
       </section>
     </main>
-    <script>
-      /***************************************/
-      const e1 = document.querySelector(".e1");
-      function teenSum(a, b) {
-        return (a >= 13 && a <= 19) || (b >= 13 && b <= 19) ? 19 : a + b;
-      }
-      e1.innerHTML = `teenSum(3, 4) → ${teenSum(
-        3,
-        4
-      )}<br>teenSum(10, 13) → ${teenSum(10, 13)}<br>teenSum(2, 20) → ${teenSum(
-        2,
-        20
-      )}`;
-      /***************************************/
-      const e2 = document.querySelector(".e2");
-      function filter_list(l) {
-        return l.filter((element) => Number.isInteger(element));
-      }
-      e2.innerHTML = `filter_list([1,2,'a','b']) → [${filter_list([
-        1,
-        2,
-        "a",
-        "b",
-      ])}]<br>filter_list([1,'a','b',0,15]) → [${filter_list([
-        1,
-        "a",
-        "b",
-        0,
-        15,
-      ])}]<br>filter_list([1,2,'aasf','1','123',123]) → [${filter_list([
-        1,
-        2,
-        "aasf",
-        "1",
-        "123",
-        123,
-      ])}]`;
-      /***************************************/
-      const e3 = document.querySelector(".e3");
-      function createPhoneNumber(numbers) {
-        return `(${numbers.slice(0, 3).join("")}) ${numbers
-          .slice(3, 6)
-          .join("")}-${numbers.slice(6, 10).join("")}`;
-      }
-      e3.innerHTML = `createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) → ${createPhoneNumber(
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-      )}<br>createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]) → ${createPhoneNumber(
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-      )}<br>createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) → ${createPhoneNumber(
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-      )}`;
-      /***************************************/
-      const e4 = document.querySelector(".e4");
-      function moveZeros(arr) {
-        const filteredArray = arr.filter((element) => element !== 0);
-        const zerosArray = arr.filter((element) => element === 0);
-        return filteredArray.concat(zerosArray);
-      }
-      e4.innerHTML = `moveZeros([false,1,0,1,2,0,1,3,"a"]) → ${moveZeros([
-        false,
-        1,
-        0,
-        1,
-        2,
-        0,
-        1,
-        3,
-        "a",
-      ])}<br>moveZeros([1,2,0,1,0,1,0,3,0,1]) → ${moveZeros([
-        1, 2, 0, 1, 0, 1, 0, 3, 0, 1,
-      ])}`;
-      /***************************************/
-      const e5 = document.querySelector(".e5");
-      function arrayDiff(a, b) {}
-      e5.innerHTML = `arrayDiff([1,2,2,2,3],[2]) = ${arrayDiff([1,2,2,2,3],[2])}<br>arrayDiff([1,2],[1]) = ${arrayDiff([1,2],[1])}<br>arrayDiff([], [1,2]) = ${arrayDiff([], [1,2])}`;
-      /***************************************/
-    </script>
+    <script src="session-05.html"></script>
   </body>
 </html>
