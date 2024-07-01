@@ -1,5 +1,5 @@
 /* eslint-disable */
-export default{
+const data = {
     about:{
       "url-api":"https://dog.ceo/dog-api/documentation/random",
       "categories":[
@@ -34,8 +34,8 @@ export default{
         },
       {
           "id":"4",
-          "image":"https://images.dog.ceo/breeds/terrier-silky/n02097658_2022.jpg",
-          "breed":"terrier"
+          "image":"https://images.dog.ceo/breeds/hound-afghan/n02088094_4352.jpg",
+          "breed":"hound-afghan"
         },
       {
           "id":"5",
@@ -44,8 +44,8 @@ export default{
         },
       {
           "id":"6",
-          "image":"https://images.dog.ceo/breeds/terrier-sealyham/n02095889_5547.jpg",
-          "breed":"terrier"
+          "image":"https://images.dog.ceo/breeds/dane-great/n02109047_1659.jpg",
+          "breed":"dane-great"
         },
       {
           "id":"7",
@@ -104,8 +104,8 @@ export default{
         },
       {
           "id":"18",
-          "image":"https://images.dog.ceo/breeds/chihuahua/n02085620_1492.jpg",
-          "breed":"chihuahua"
+          "image":"https://images.dog.ceo/breeds/germanshepherd/n02106662_3431.jpg",
+          "breed":"german-shepperd"
         },
       {
           "id":"19",
@@ -123,4 +123,6 @@ export default{
           "breed":"labrador"
         }
     ]
-  }
+  };
+
+  export default data;
