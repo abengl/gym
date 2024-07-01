@@ -110,12 +110,18 @@ e6.innerHTML = `checkIfPangram("thequickbrownfoxjumpsoverthelazydog") = ${checkI
 
 const e7 = document.querySelector(".e7");
 
-function countClumps(nums) {}
+function countClumps(nums) {
+  let counter = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if(nums[i + 1] == nums[i] && nums[i + 1] !== nums[i + 2]) counter++;
+  }
+  return counter;
+}
 e7.innerHTML = `countClumps([1, 2, 2, 3, 4, 4]) = ${countClumps([
   1, 2, 2, 3, 4, 4,
 ])} <br>countClumps([1, 1, 2, 1, 1]) = ${countClumps([
   1, 2, 2, 3, 4, 4,
-])}<br>countClumps([1, 1, 1, 1, 1]) = ${countClumps([1, 2, 2, 3, 4, 4])}`;
+])}<br>countClumps([1, 1, 1, 1, 1]) = ${countClumps([1, 1, 1, 1, 1])}`;
 
 /*
 Lógica de Programación
@@ -124,100 +130,100 @@ Lógica de Programación
 //500,200,100,50,20,10,5 Monedas 1. Cantidad mínima de billetes para obtener una cantidad de dinero.
 
 //Definimos un monto de ejemplo y variables.
-const monto = 1851;
-let cantidadBilletes = 0;
-let cantidadRestante = 0;
-let counter = 0;
-let cantidadMonedas = 0;
+// const monto = 1851;
+// let cantidadBilletes = 0;
+// let cantidadRestante = 0;
+// let counter = 0;
+// let cantidadMonedas = 0;
 
-function bills(monto) {
-//Si monto >= 500, entonces dividimos el monto entre 500, esa cantidad de billetes la añadimos al cociente.
-if (monto >= 500) {
-  cantidadBilletes += Math.floor(monto / 500);
-  //console.log(cantidadBilletes);
+// function bills(monto) {
+// //Si monto >= 500, entonces dividimos el monto entre 500, esa cantidad de billetes la añadimos al cociente.
+// if (monto >= 500) {
+//   cantidadBilletes += Math.floor(monto / 500);
+//   //console.log(cantidadBilletes);
 
-  counter = Math.floor(monto / 500);
-  console.log(`# Billetes de 500: ${counter}`);
+//   counter = Math.floor(monto / 500);
+//   console.log(`# Billetes de 500: ${counter}`);
 
-  cantidadRestante = monto - (500 * counter);
-  //console.log(cantidadRestante);
-}
+//   cantidadRestante = monto - (500 * counter);
+//   //console.log(cantidadRestante);
+// }
 
-if (cantidadRestante >= 200) {
-  cantidadBilletes += Math.floor(cantidadRestante / 200);
-  //console.log(cantidadBilletes);
+// if (cantidadRestante >= 200) {
+//   cantidadBilletes += Math.floor(cantidadRestante / 200);
+//   //console.log(cantidadBilletes);
 
-  counter = Math.floor(cantidadRestante / 200);
-  console.log(`# Billetes de 200: ${counter}`);
+//   counter = Math.floor(cantidadRestante / 200);
+//   console.log(`# Billetes de 200: ${counter}`);
 
-  cantidadRestante -= (200 * counter);
-  //console.log(cantidadRestante);
-}
+//   cantidadRestante -= (200 * counter);
+//   //console.log(cantidadRestante);
+// }
 
-if (cantidadRestante >= 100) {
-  cantidadBilletes += Math.floor(cantidadRestante / 100);
-  //console.log(cantidadBilletes);
+// if (cantidadRestante >= 100) {
+//   cantidadBilletes += Math.floor(cantidadRestante / 100);
+//   //console.log(cantidadBilletes);
 
-  counter = Math.floor(cantidadRestante / 100);
-  console.log(`# Billetes de 100: ${counter}`);
+//   counter = Math.floor(cantidadRestante / 100);
+//   console.log(`# Billetes de 100: ${counter}`);
 
-  cantidadRestante -= (100 * counter);
-  //console.log(cantidadRestante);
-}
+//   cantidadRestante -= (100 * counter);
+//   //console.log(cantidadRestante);
+// }
 
-if (cantidadRestante >= 50) {
-  cantidadBilletes += Math.floor(cantidadRestante / 50);
-  //console.log(cantidadBilletes);
+// if (cantidadRestante >= 50) {
+//   cantidadBilletes += Math.floor(cantidadRestante / 50);
+//   //console.log(cantidadBilletes);
 
-  counter = Math.floor(cantidadRestante / 50);
-  console.log(`# Billetes de 50: ${counter}`);
+//   counter = Math.floor(cantidadRestante / 50);
+//   console.log(`# Billetes de 50: ${counter}`);
 
-  cantidadRestante -= (50 * counter);
-  //console.log(cantidadRestante);
-}
+//   cantidadRestante -= (50 * counter);
+//   //console.log(cantidadRestante);
+// }
 
-if (cantidadRestante >= 20) {
-  cantidadBilletes += Math.floor(cantidadRestante / 20);
-  //console.log(cantidadBilletes);
+// if (cantidadRestante >= 20) {
+//   cantidadBilletes += Math.floor(cantidadRestante / 20);
+//   //console.log(cantidadBilletes);
 
-  counter = Math.floor(cantidadRestante / 20);
-  console.log(`# Billetes de 20: ${counter}`);
+//   counter = Math.floor(cantidadRestante / 20);
+//   console.log(`# Billetes de 20: ${counter}`);
 
-  cantidadRestante -= (20 * counter);
-  //console.log(cantidadRestante);
-}
-if (cantidadRestante >= 10) {
-  cantidadBilletes += Math.floor(cantidadRestante / 10);
-  //console.log(cantidadBilletes);
+//   cantidadRestante -= (20 * counter);
+//   //console.log(cantidadRestante);
+// }
+// if (cantidadRestante >= 10) {
+//   cantidadBilletes += Math.floor(cantidadRestante / 10);
+//   //console.log(cantidadBilletes);
 
-  counter = Math.floor(cantidadRestante / 10);
-  console.log(`# Billetes de 10: ${counter}`);
+//   counter = Math.floor(cantidadRestante / 10);
+//   console.log(`# Billetes de 10: ${counter}`);
 
-  cantidadRestante -= (10 * counter);
-  //console.log(cantidadRestante);
-}
-if (cantidadRestante >= 5) {
-  cantidadBilletes += Math.floor(cantidadRestante / 5);
-  //console.log(cantidadBilletes);
+//   cantidadRestante -= (10 * counter);
+//   //console.log(cantidadRestante);
+// }
+// if (cantidadRestante >= 5) {
+//   cantidadBilletes += Math.floor(cantidadRestante / 5);
+//   //console.log(cantidadBilletes);
 
-  counter = Math.floor(cantidadRestante / 5);
-  console.log(`# Billetes de 5: ${counter}`);
+//   counter = Math.floor(cantidadRestante / 5);
+//   console.log(`# Billetes de 5: ${counter}`);
 
-  cantidadRestante -= (5 * counter);
-  //console.log(cantidadRestante);
-}
+//   cantidadRestante -= (5 * counter);
+//   //console.log(cantidadRestante);
+// }
 
-if (cantidadRestante >= 1) {
-  cantidadMonedas += Math.floor(cantidadRestante / 1);
-  console.log(`# Monedas: ${cantidadMonedas}`);
+// if (cantidadRestante >= 1) {
+//   cantidadMonedas += Math.floor(cantidadRestante / 1);
+//   console.log(`# Monedas: ${cantidadMonedas}`);
 
-  counter = Math.floor(cantidadMonedas / 200);
-  // console.log(counter);
+//   counter = Math.floor(cantidadMonedas / 200);
+//   // console.log(counter);
 
-  cantidadMonedas -= (1 * counter);
-  // console.log(cantidadMonedas);
-}
-return `Cantidad total de billetes: ${cantidadBilletes} - Cantidad total de monedas: ${cantidadMonedas}`
-}
+//   cantidadMonedas -= (1 * counter);
+//   // console.log(cantidadMonedas);
+// }
+// return `Cantidad total de billetes: ${cantidadBilletes} - Cantidad total de monedas: ${cantidadMonedas}`
+// }
 
-console.log(bills(591));
+// console.log(bills(591));
