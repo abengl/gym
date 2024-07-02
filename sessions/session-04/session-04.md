@@ -4,15 +4,15 @@
 
 ### Beginner
 
-- [**Transpose matrix**](../exercises/ia-transpose-matrix/README.md)
+- [**Transpose matrix**](../../exercises/ia-transpose-matrix/README.md)
 
 ## Ejercicios
 
 ### Newbie
 
-- [**biggerTwo**](../exercises/bigger-two/README.md )
-- [**redTicket**](../exercises/red-ticket/README.md)
-- [**middleThree**](../exercises/middle-three/README.md)
+- [**biggerTwo**](../../exercises/bigger-two/README.md )
+- [**redTicket**](../../exercises/red-ticket/README.md)
+- [**middleThree**](../../exercises/middle-three/README.md)
 
 ### Beginner
 
