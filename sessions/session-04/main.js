@@ -74,8 +74,8 @@ solutions[2].innerHTML = `
 /*Dada una cadena de longitud impar, devuelva una cadena de longitud 3
 desde su centro, por lo que "Candy" produce "and". La longitud de la
 cadena será de al menos 3. */
-function middleThree(str){
-  const middleIndex = Math.floor((str.length) / 2);
+function middleThree(str) {
+  const middleIndex = Math.floor(str.length / 2);
   return str.slice(middleIndex - 1, middleIndex + 2);
 }
 
@@ -86,7 +86,27 @@ function middleThree(str) {
 }
 */
 solutions[3].innerHTML = `
-middleThree('Candy') → ${middleThree('Candy')}<br>
-middleThree('and') → ${middleThree('and')}<br>
-middleThree('solving') → ${middleThree('solving')}
+                          middleThree('Candy') → ${middleThree("Candy")}<br>
+                          middleThree('and') → ${middleThree("and")}<br>
+                          middleThree('solving') → ${middleThree("solving")}
+                        `;
+
+function transform(source, target) {
+  let result = [source];
+  let sourceArray = source.split("");
+
+  for (let i = 0; i < source.length; i++) {
+    if (sourceArray[i] !== target[i]) {
+      sourceArray[i] = target[i];
+      result.push(sourceArray.join(""));
+    }
+  }
+  return result;
+}
+
+solutions[4].innerHTML = `
+transform('car','see') ➞ ${transform("car", "see")}<br>
+transform('casa','buho') ➞ ${transform("casa", "buho")}<br>
+transform('floor','brake') ➞ ${transform("floor", "brake")}<br>
+transform('kata','math') ➞ ${transform("kata", "math")}
 `;
