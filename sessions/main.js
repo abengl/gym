@@ -1,0 +1,4 @@
+/*
+¡Hola! Necesito tu ayuda. Por favor, como desarrollador, crea un archivo HTML que utilice un <div> y CSS para crear la imagen de un corazón. Primero crea un cuadrado rojo. Luego, utilizando pseudo-selectores ::before y ::after, compleméntalo para formar los lóbulos del corazón. Estos lóbulos deben ubicarse sobre le cuadrado (top) y al lado derecho del cuadrado (left).
+ El corazón resultante debe tener una animación que simule latir ni muy rápido ni muy lento. Por favor, deja un espacio para que la imagen se ubique con un margen del borde del documento de 150px. La página no tiene fondo. Retorna solo un index.html con los estilos. 
+*/
