@@ -16,8 +16,8 @@
 
 ### Beginner
 
-- [**Abbreviate a Two Word Name**](../exercises/abbreviation/README.md)
-- [**Remove First and Last Character**](../exercises/remove-first-and-last-character/README.md)
+- [**Abbreviate a Two Word Name**](../../exercises/abbreviation/README.md)
+- [**Remove First and Last Character**](../../exercises/remove-first-and-last-character/README.md)
 
 ### Intermediate
 
