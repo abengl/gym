@@ -1,5 +1,12 @@
 const solutions = document.querySelectorAll("code");
 
+/* Ejercicio 1
+En matemáticas, la matriz traspuesta es aquella que surge como resultado de
+realizar un cambio de columnas por filas y filas por columnas en la matriz original,
+generándose una nueva matriz (a la que llamamos traspuesta)
+Crear un solo prompt con ayuda de una herramienta de inteligencia artificial que
+te permita replicar por completo la siguiente interfaz: https://stingy-brass-organ.glitch.me
+*/
 solutions[0].innerHTML = `Como desarrollador web, crea la estructura básica HTML para una web
           que calcule la matriz transpuesta de los inputs ingresados por el
           usuario. Sigue este esquema:<br />
@@ -20,13 +27,18 @@ solutions[0].innerHTML = `Como desarrollador web, crea la estructura básica HTM
             gym/exercises/ia-transpose-matrix/index.html</strong
           >`;
 
+/* Ejercicio 2
+Se tienen dos arreglos de números enteros, `a` y `b`, cada uno de longitud dos.
+Calcule la suma de los valores de cada arreglo. Devuelva el array que tenga la
+mayor suma. En caso de empate, devuelva el arreglo `a`.
+*/
 function biggerTwo(a, b) {
   const sumA = a.reduce((accumulator, element) => accumulator + element, 0);
   const sumB = b.reduce((accumulator, element) => accumulator + element, 0);
   return sumA >= sumB ? a : b;
 }
 
-/*
+/* Alternative Solution
 function biggerTwo(a, b) {
     // Calculate sums of arrays a and b
     const sumA = a[0] + a[1];
@@ -49,6 +61,12 @@ solutions[1].innerHTML = `
                         biggerTwo([1, 1], [1, 2]) → ${biggerTwo([1, 1], [1, 2])}
                         `;
 
+/* Ejercicio 3
+Tienes un billete de lotería rojo que muestra los enteros `a`, `b` y `c`, cada uno
+de los cuales es 0, 1 o 2. Si todos tienen el valor 2, el resultado es 10.
+Si son todos iguales, el resultado es 5. Si `b` y `c` son diferentes de `a`, el
+resultado es 1. Si no, el resultado es 0.
+*/
 function redTicket(a, b, c) {
   if (a === 2 && b === 2 && c === 2) return 10;
   else if (a === b && b === c) return 5;
@@ -56,7 +74,7 @@ function redTicket(a, b, c) {
   else return 0;
 }
 
-/*
+/* Alternative Solution
 function redTicket(a, b, c) {
     return (a === 2 && b === 2 && c === 2) ? 10 :
            (a === b && b === c) ? 5 :
@@ -71,15 +89,17 @@ solutions[2].innerHTML = `
                         redTicket(0, 0, 0) → ${redTicket(0, 0, 0)}
                         `;
 
-/*Dada una cadena de longitud impar, devuelva una cadena de longitud 3
+/* Ejercicio 4
+Dada una cadena de longitud impar, devuelva una cadena de longitud 3
 desde su centro, por lo que "Candy" produce "and". La longitud de la
-cadena será de al menos 3. */
+cadena será de al menos 3.
+*/
 function middleThree(str) {
   const middleIndex = Math.floor(str.length / 2);
   return str.slice(middleIndex - 1, middleIndex + 2);
 }
 
-/*
+/* Alternative Solution
 function middleThree(str) {
     const middleIndex = Math.floor(str.length / 2);
     return str.substring(middleIndex - 1, middleIndex + 2);
@@ -91,6 +111,55 @@ solutions[3].innerHTML = `
                           middleThree('solving') → ${middleThree("solving")}
                         `;
 
+/* Ejercicio 5
+Escribe una función que convierte un nombre en iniciales. Esta función toma
+exactamente dos palabras con un espacio entre ellos.
+La salida debe ser dos letras capitalizadas con un punto que las separa.
+*/
+function abbrevName(name) {
+  let changed = name.toUpperCase().split(" ");
+  return `${changed[0][0]}.${changed[1][0]}`;
+}
+
+/*Alternative solution
+function abbrevName(name) {
+  return name
+    .split(' ')
+    .map(word => word[0].toUpperCase())
+    .join('.');
+}
+ */
+solutions[4].innerHTML = `abbrevName("Sam Harris") = ${abbrevName(
+  "Sam Harris"
+)}<br>abbrevName("david mendieta") = ${abbrevName(
+  "david mendieta"
+)}<br>abbrevName("P Favuzzi") = ${abbrevName("P Favuzzi")}`;
+
+/* Ejercicio 6
+El objetivo es crear una función que elimine el primer y último carácter del string.
+La función tiene como parámetro un string 'str'. No tienes que preocuparte por
+cadenas con menos de dos caracteres.
+*/
+function removeChar(str){
+  return str.substring(1, str.length - 1);
+ }; 
+
+/*Alternative solution 
+function removeChar(str) {
+  return str.slice(1, -1);
+}
+*/
+solutions[5].innerHTML = `
+removeChar('eloquent') = ${removeChar('eloquent')}<br>
+(removeChar('country') = ${removeChar('country')}<br>
+(removeChar('and') = ${removeChar('and')}
+`;
+
+/* Ejercicio 7
+Escribe una función que reciba dos cadenas como parámetros e iteralas para
+trasformar la cadena `source` y termine convertida en la cadena `target` el
+resultado de cada iteración guardalo en un arreglo.
+*/
 function transform(source, target) {
   let result = [source];
   let sourceArray = source.split("");
@@ -104,7 +173,7 @@ function transform(source, target) {
   return result;
 }
 
-solutions[4].innerHTML = `
+solutions[6].innerHTML = `
 transform('car','see') ➞ ${transform("car", "see")}<br>
 transform('casa','buho') ➞ ${transform("casa", "buho")}<br>
 transform('floor','brake') ➞ ${transform("floor", "brake")}<br>
