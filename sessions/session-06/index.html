@@ -1,49 +1,96 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corazón latiendo</title>
-<style>
-    body {
-        margin: 200px;
-    }
-    .corazon {
-        position: relative;
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        transform: rotate(-45deg);
-        animation: latido 1.5s infinite alternate;
-    }
-    .corazon::before,
-    .corazon::after {
-        content: '';
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        border-radius: 50%;
-    }
-    .corazon::before {
-        top: -50px;
-        left: 0;
-    }
-    .corazon::after {
-        top: 0;
-        left: 50px;
-    }
-    @keyframes latido {
-        0% {
-            transform: scale(1);
-        }
-        100% {
-            transform: scale(1.5);
-        }
-    }
-</style>
-</head>
-<body>
-    <div class="corazon"></div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Session 6</title>
+  </head>
+  <body>
+    <header>
+      <h1>Session 6</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Living heart</h2>
+        <p>
+          Hay páginas web que destacan por su diseño. Para lograrlo, se utilizan
+          diferentes herramientas visuales, las cuales ayudan a generar páginas
+          más dinámicas. La animación web es la encargada de los elementos que
+          están en movimiento. Escribe los prompts necesarios para crear un
+          corazón animado muy similar a esta
+          <a href="http://zest-witty-secure.glitch.me">web</a>.
+        </p>
+        <code class="e1"></code>
+      </section>
+      <section>
+        <h2>Plus Two</h2>
+        <p>
+          Dado dos arreglos de enteros, cada uno con longitud 2, retornar un
+          nuevo arreglo, con longitud 4, conteniendo todos los elementos de
+          arreglos iniciales.
+        </p>
+        <code class="e2"></code>
+      </section>
+      <section>
+        <h2>Job Matching</h2>
+        <p>
+          Construyamos un sistema de coincidencias que ayude a descubrir
+          trabajos para desarrolladoras en función de una serie de factores.
+          Vamos a crear una función match que toma una candidata y un trabajo,
+          que devolverá un booleano indicando si el trabajo es una coincidencia
+          válida para la candidata.
+        </p>
+        <code class="e"></code>
+      </section>
+      <section>
+        <h2>Format words into a sentence</h2>
+        <p>
+          Implementa una función que dado un arreglo de palabras devuelve una
+          cadena con las palabras separadas con comas. La última palabra debería
+          estar separada por la palabra 'and' en lugar de una coma. El método
+          recibe un array de cadenas y devuelve solo una cadena formateada.
+        </p>
+        <code class="e"></code>
+      </section>
+      <section>
+        <h2>Array Diff</h2>
+        <p>
+          Tu objetivo en este ejercicio es implementar una función de
+          diferencia, la cual resta el contenido de un arreglo de otro y
+          devuelve el resultado. Recuerda que debes eliminar todos los valores
+          del arreglo `a`, que estén presentes en el arreglo `b` manteniendo el
+          orden.
+        </p>
+        <code class="e"></code>
+      </section>
+      <section>
+        <h2></h2>
+        <p></p>
+        <code class="e"></code>
+      </section>
+      <section>
+        <h2></h2>
+        <p></p>
+        <code class="e"></code>
+      </section>
+      <section>
+        <h2></h2>
+        <p></p>
+        <code class="e"></code>
+      </section>
+      <section>
+        <h2></h2>
+        <p></p>
+        <code class="e"></code>
+      </section>
+      <section>
+        <h2></h2>
+        <p></p>
+        <code class="e"></code>
+      </section>
+    </main>
+    <footer>Alessandra Godoy 2024</footer>
+    <script src="main.js"></script>
+  </body>
 </html>

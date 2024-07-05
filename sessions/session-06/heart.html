@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corazón latiendo</title>
+<style>
+    body {
+        margin: 200px;
+    }
+    .corazon {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transform: rotate(-45deg);
+        animation: latido 1.5s infinite alternate;
+    }
+    .corazon::before,
+    .corazon::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+    }
+    .corazon::before {
+        top: -50px;
+        left: 0;
+    }
+    .corazon::after {
+        top: 0;
+        left: 50px;
+    }
+    @keyframes latido {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.5);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="corazon"></div>
+</body>
+</html>
