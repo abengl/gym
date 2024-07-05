@@ -4,28 +4,28 @@
 
 ### Intermediate
 
-- [**Living heart**](../exercises/ia-css-living-heart/README.md)
+- [**Living heart**](../../exercises/ia-css-living-heart/README.md)
 
 
 ## Ejercicios
 
 ### Newbie
 
-- [**Plus Two**](../exercises/plus-two/README.md)
+- [**Plus Two**](../../exercises/plus-two/README.md)
 
 ### Beginner
 
-- [**Job Matching**](../exercises/job-matching/README.md)
+- [**Job Matching**](../../exercises/job-matching/README.md)
 
 ### Intermediate
 
-- [**Format words into a sentence**](../exercises/format-words/README.md)
-- [**Array diff**](../exercises/array-diff/README.md)
-- [**Pangram**](../exercises/pangram/README.md)
+- [**Format words into a sentence**](../../exercises/format-words/README.md)
+- [**Array diff**](../../exercises/array-diff/README.md)
+- [**Pangram**](../../exercises/pangram/README.md)
 
 ### Advanced
 
-- [**Max Span**](../exercises/max-span/README.md)
+- [**Max Span**](../../exercises/max-span/README.md)
 
 ## Kahoot
 
