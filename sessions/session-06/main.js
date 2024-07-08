@@ -131,3 +131,35 @@ arrayDiff([1,2,2], [2]) = ${arrayDiff([1, 2, 2], [2])}<br>
 arrayDiff([1,2,2], [] = ${arrayDiff([1, 2, 2], [])}<br>
 arrayDiff([], [1,2]) = ${arrayDiff([], [1, 2])}
 `;
+
+/*E6
+Un pangrama es una sentencia donde cada letra del alfabeto Ingles aparece al
+menos una vez. Dado un string `sentence` que contiene solo letras del Ingles en minúscula,
+retorna `true` si `sentence` es un pangrama, or `false` de otra forma.
+*/
+/**
+ * @param {string} sentence
+ * @return {boolean}
+ */
+let checkIfPangram = function(sentence) {
+    const uniqueCharacters = new Set(sentence.toLowerCase().replace(/[^a-z]/g, ""));
+    console.log(uniqueCharacters);
+    return uniqueCharacters.size === 26;
+};
+/*Alternative Solution:
+let checkIfPangram = function(sentence) {
+  // Crear un string con todas las letras del abecedario
+  const abc = "abcdefghijklmnopqrstuvwxyz";
+  // Transformar el input en array
+  const arrayInput = sentence.toLowerCase().split("");
+  // Filtrar las letras que están en el input
+  const filteredArray = abc.split("").filter(value => arrayInput.indexOf(value) !== -1);
+  // Retornar true si todos los caracteres están en el objeto
+  return filteredArray.length === abc.length;
+};
+*/
+
+codeElements[5].innerHTML = `
+checkIfPangram("thequickbrownfoxjumpsoverthelazydog") = ${checkIfPangram("thequickbrownfoxjumpsoverthelazydog")}.<br>
+checkIfPangram("aben") = ${checkIfPangram("aben")}.
+`;
