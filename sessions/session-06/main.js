@@ -141,10 +141,12 @@ retorna `true` si `sentence` es un pangrama, or `false` de otra forma.
  * @param {string} sentence
  * @return {boolean}
  */
-let checkIfPangram = function(sentence) {
-    const uniqueCharacters = new Set(sentence.toLowerCase().replace(/[^a-z]/g, ""));
-    console.log(uniqueCharacters);
-    return uniqueCharacters.size === 26;
+let checkIfPangram = function (sentence) {
+  const uniqueCharacters = new Set(
+    sentence.toLowerCase().replace(/[^a-z]/g, "")
+  );
+  console.log(uniqueCharacters);
+  return uniqueCharacters.size === 26;
 };
 /*Alternative Solution:
 let checkIfPangram = function(sentence) {
@@ -160,6 +162,41 @@ let checkIfPangram = function(sentence) {
 */
 
 codeElements[5].innerHTML = `
-checkIfPangram("thequickbrownfoxjumpsoverthelazydog") = ${checkIfPangram("thequickbrownfoxjumpsoverthelazydog")}.<br>
+checkIfPangram("thequickbrownfoxjumpsoverthelazydog") = ${checkIfPangram(
+  "thequickbrownfoxjumpsoverthelazydog"
+)}.<br>
 checkIfPangram("aben") = ${checkIfPangram("aben")}.
+`;
+
+/*E7 
+Consideremos las apariciones más a la izquierda y más a la
+derecha de algún valor en un array. Diremos que el "span"
+es el número de elementos entre los dos inclusive. Un solo
+valor tiene un span de 1. Devuelve el mayor span encontrado
+en el array dado. (La eficiencia no es una prioridad).
+*/
+function maxSpan(nums) {
+  //defino un span counter
+  //itero el array por el inicio y el final
+  //mido la longitud
+  //actualizo el counter si es menor a la longitud
+  /*
+  let maxSpan = 0;
+  let arr = [];
+  for (let i = 0; i < nums.length; i++) {
+    maxSpan = nums.lastIndexOf(nums[i]) - i + 1;
+    arr.push(maxSpan);
+  }
+  return Math.max(...arr);
+  */
+  return nums.reduce((maxSpan, number, index) => {
+    let span = nums.lastIndexOf(number) - index + 1;
+    return span > maxSpan ? (maxSpan = span) : maxSpan;
+  }, 0);
+}
+
+codeElements[6].innerHTML = `
+maxSpan([1, 2, 1, 1, 3]) → ${maxSpan([1, 2, 1, 1, 3])}<br>
+maxSpan([1, 4, 2, 1, 4, 1, 4]) → ${maxSpan([1, 4, 2, 1, 4, 1, 4])}<br>
+maxSpan([1, 4, 2, 1, 4, 4, 4]) → ${maxSpan([1, 4, 2, 1, 4, 4, 4])}
 `;
